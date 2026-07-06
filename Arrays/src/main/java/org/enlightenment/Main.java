@@ -30,8 +30,23 @@ public class Main {
 
         int[] numbers_2 = {2, 4, 6, 8, 10, 12};
         for (int i = 0; i < numbers_2.length; i++) {
-            System.out.println("Индекс + " + i + " -> " + numbers_2[i]);
+            System.out.println("Индекс " + i + " -> " + numbers_2[i]);
         }
 
+        int[] numbers_3 = {100, 200, 300};
+        int sum = 0;
+        for (int i = 0; i < numbers_3.length; i++) {
+            sum += numbers_3[i];
+        }
+        System.out.println("Сумма " + sum);
+
+        System.out.println(sumArray(numbers_3));
+    }
+    public static int sumArray(int[] numbers) {
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum;
     }
 }
