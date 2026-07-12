@@ -61,4 +61,31 @@ public class Main {
         }
         return max;
     }
+    public static int countEvenNumbers(int[] numbers) {
+        int count = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int countNumbersBiggerThanTwenty(int[] numbers) {
+        int count = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 20) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int countGreaterThanTen(int[] numbers) {
+        int count = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 10) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
