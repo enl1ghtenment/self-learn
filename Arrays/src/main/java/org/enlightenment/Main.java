@@ -41,6 +41,9 @@ public class Main {
         System.out.println("Сумма " + sum);
 
         System.out.println(sumArray(numbers_3));
+
+        int[] numbers_4 = {5, 12, 3, 20, 8};
+        System.out.println(findMaxElementInArray(numbers_4));
     }
     public static int sumArray(int[] numbers) {
         int sum = 0;
@@ -48,5 +51,14 @@ public class Main {
             sum += numbers[i];
         }
         return sum;
+    }
+    public static int findMaxElementInArray(int[] numbers) {
+        int max = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (max < numbers[i]) {
+                max = numbers[i];
+            }
+        }
+        return max;
     }
 }
