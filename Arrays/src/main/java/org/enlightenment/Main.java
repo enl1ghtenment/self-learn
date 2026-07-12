@@ -44,6 +44,9 @@ public class Main {
 
         int[] numbers_4 = {5, 12, 3, 20, 8};
         System.out.println(findMaxElementInArray(numbers_4));
+
+        int[] numbers_5 = {2, 4, 6, 8};
+        System.out.println("Среднее значение " + average(numbers_5));
     }
     public static int sumArray(int[] numbers) {
         int sum = 0;
@@ -87,5 +90,30 @@ public class Main {
             }
         }
         return count;
+    }
+    public static double average(int[] numbers) {
+        int sum = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        return (double) sum / numbers.length;
+    }
+    public static boolean contains(int[] numbers, int target){
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == target) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static int findIndex(int[] numbers, int target) {
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == target) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
