@@ -75,6 +75,66 @@ public class Main {
                 {4,5,6}
         };
         System.out.println(doubleArray[1][1]);
+        int[][] numbers_9 = {
+                {2, 4, 6},
+                {8, 10, 12}
+        };
+        for (int i = 0; i < numbers_9.length; i++) {
+            for (int j = 0; j < numbers_9[i].length; j++) {
+                System.out.print(numbers_9[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int[][] numbers_10 = {
+                {1, 2},
+                {3, 4},
+                {5, 6}
+        };
+        System.out.println(sum2DArray(numbers_10));
+        int[][] numbers_11 = {
+                {3, 7, 2},
+                {9, 1, 5}
+        };
+        System.out.println(maxElementIn2DArray(numbers_11));
+
+        System.out.println("================================");
+
+        int[][] matrix = {
+                {5, 5, 5},
+                {-3, 1, 8},
+                {5, 6, -10}
+        };
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        increaseByOne(matrix);
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        replaceNegativeWithZero(matrix);
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("======================");
+
+        int[][] matrix_1 = {
+                {5, 4, 5},
+                {-3, 1, 8},
+                {5, 6, -10}
+        };
+        System.out.println(sumRow(matrix_1, 0));
     }
     public static int sumArray(int[] numbers) {
         int sum = 0;
@@ -187,5 +247,48 @@ public class Main {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] *= 2;
         }
+    }
+    public static int sum2DArray (int [][] matrix) {
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+        }
+        return sum;
+    }
+    public static int maxElementIn2DArray(int[][] matrix) {
+        int max = matrix[0][0];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
+                }
+            }
+        }
+        return max;
+    }
+    public static void increaseByOne(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j]++;
+            }
+        }
+    }
+    public static void replaceNegativeWithZero(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < 0) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+    public static int sumRow(int[][] matrix, int row) {
+        int sum = 0;
+        for (int i = 0; i < matrix[row].length; i++) {
+            sum += matrix[row][i];
+        }
+        return sum;
     }
 }
